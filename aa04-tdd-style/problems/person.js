@@ -23,10 +23,11 @@ class Person {
         this.name = obj.name
         this.age = obj.age
       }
+      
     }
 
     tryUpdate(obj) {
-      
+
     }
 }
 

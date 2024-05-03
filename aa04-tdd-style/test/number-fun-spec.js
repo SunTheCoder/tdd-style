@@ -28,8 +28,12 @@ describe('reciprocal', function() {
     })
     it('Should return invalid if number exceeds range', function() {
 
-        expect(reciprocal(-1)).to.equal(RangeError())
-        expect(reciprocal(1000001)).to.equal(RangeError())
+        let bound1 = reciprocal.bind(null, -1)
+        let bound2 = reciprocal.bind(null, 1000001)
+
+        
+            expect(bound1).to.throw(RangeError)
+            expect(bound2).to.throw(RangeError)
 
     })
 })
